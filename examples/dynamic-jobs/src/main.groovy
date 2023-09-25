@@ -1,5 +1,7 @@
 @Grab('org.yaml:snakeyaml:1.17')
 import hudson.model.*
+import org.yaml.snakeyaml.Yaml
+
 ArrayList searchYamlFiles(String dirPath) {
     ArrayList file_list = []
     File dir = new File(dirPath)
