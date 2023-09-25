@@ -27,4 +27,9 @@ for (current_pipeline in pipeline_file_list) {
     parsed_job_config = new Yaml().load((current_pipeline as File).text)
 
     println("job name is : "+ parsed_job_config.job_name)
+    job(parsed_job_config.job_name) {
+        steps {
+            shell('echo Hello World!')
+        }
+    }
 }
