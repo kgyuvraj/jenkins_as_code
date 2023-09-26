@@ -28,7 +28,7 @@ for (current_pipeline in pipeline_file_list) {
 
     JobUtils job_config = new JobUtils(current_pipeline)
     println("job name is : "+job_config.get_job_name())
-    pipelineJob.with {
+    pipelineJob(job_config.get_job_name()){
         definition {
             cps {
                 script("""
