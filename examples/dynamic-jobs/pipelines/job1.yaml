@@ -1,2 +1,6 @@
 job_name: "dynamic-job-1"
 build_command: "build command for job-1"
+env:
+  - dev
+  - qa
+  - prod
