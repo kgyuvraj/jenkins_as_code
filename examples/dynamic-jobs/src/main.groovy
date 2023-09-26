@@ -27,7 +27,7 @@ for (current_pipeline in pipeline_file_list) {
     println("Working on :" + current_pipeline)
 
     JobUtils job_config = new JobUtils(current_pipeline)
-    env_list = job_config.get_environment()
+    env_list = job_config.get_environments()
     def dev_stage = ""
     def qa_stage = ""
     def prod_stage = ""
