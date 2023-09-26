@@ -26,8 +26,8 @@ for (current_pipeline in pipeline_file_list) {
     println("Working on :" + current_pipeline)
 
     JobUtils job_config = new JobUtils(current_pipeline)
-    println("job name is : "+ job_config.job_name)
-    job(job_config.job_name) {
+    println("job name is : "+ job_config.get_job_name())
+    job(job_config.get_job_name()) {
         steps {
             shell('echo Hello World!')
         }
